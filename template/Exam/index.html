@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block title  %}Home{% endblock title  %}
+{% block maincontent %}
+
+        <!-- home1 Start -->
+        <div class="hero">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                    <br><br><br>
+                        <div class="hero-text">
+                            <h1>eExam</h1>
+                            <p>
+                                An online examination system is a computer-based test system that can be used to conduct computer based tests online. 
+                                This examination system uses fewer resources and reduces the need for question papers and answer scripts, exam room scheduling, arranging invigilators, coordinating with examiners, and more.
+                            </p> 
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block left">
+                    <br><br><br>
+                        <div class="hero-image">
+                            <img src="{% static 'images/exam.jpg' %}" alt="exam Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- home1 End -->
+
+
+        <!-- About Start -->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-img">
+                            <img src="{% static 'images/online-exam.jpg' %}" alt="Image" width="400" height="300">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>Learn About Us</p>
+                            <h2>Welcome to eEXAM</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                We need an online examination system to ensure examination continuity amid any present and unforeseen disruptions, such as the one caused by COVID-19. 
+                                Traditional education has suffered immensely because of the ongoing pandemic. 
+                            </p>
+                            <p>
+                                The only way universities can sail through such times is to do away with the pen-and-paper mode of examination and adopt an online examination system.
+                                This ensures seamless continuity of academic sessions, widening the scope of an online examination system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+      
+        <!-- purpose Start -->
+        <div class="discount wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2><span>Purpose</span></h2>
+                </div>
+                <div class="container discount-text">
+                    <p>
+                        The purpose of the online examination system is to test the subject knowledge of the students. 
+                        Such a system eliminates logistical hassles and drawbacks in the traditional mode of the pen-and-paper examination.
+                        An online exam is a great way of conducting tests and other important exams with help of the internet. 
+                        An online exam needs a device capable of accessing the internet such as a computer or a smartphone.
+                        This can be either done at an examination center or at home.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- purpose End -->
+
+{% endblock maincontent %} 

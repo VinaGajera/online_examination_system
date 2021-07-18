@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block title  %}About{% endblock title  %}
+{% block maincontent %}
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href=" {% url 'index' %} ">Home</a>
+                        <a href="">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- About Start -->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-img">
+                            <img src="{% static 'images/online-exam.jpg' %}" alt="Image" width="400" height="300">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>Learn About Us</p>
+                            <h2>Welcome to eEXAM</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                We need an online examination system to ensure examination continuity amid any present and unforeseen disruptions, such as the one caused by COVID-19. 
+                                Traditional education has suffered immensely because of the ongoing pandemic. 
+                            </p>
+                            <p>
+                                The only way universities can sail through such times is to do away with the pen-and-paper mode of examination and adopt an online examination system.
+                                This ensures seamless continuity of academic sessions, widening the scope of an online examination system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+ {% endblock maincontent %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block title  %}Purpose{% endblock title  %}
+{% block maincontent %}
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Purpose</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href=" {% url 'index' %} ">Home</a>
+                        <a href="">Purpose</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+<!-- purpose Start -->
+        <div class="discount wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2><span>Purpose</span></h2>
+                </div>
+                <div class="container discount-text">
+                    <p>
+                        The purpose of the online examination system is to test the subject knowledge of the students. 
+                        Such a system eliminates logistical hassles and drawbacks in the traditional mode of the pen-and-paper examination.
+                        An online exam is a great way of conducting tests and other important exams with help of the internet. 
+                        An online exam needs a device capable of accessing the internet such as a computer or a smartphone.
+                        This can be either done at an examination center or at home.
+                    </p>
+                </div>
+            </div>
+        </div>
+<!-- purpose End -->
+ {% endblock maincontent %}
