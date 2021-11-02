@@ -1,0 +1,65 @@
+{% extends 'admin/base_admin.html' %}
+{% load static %}
+
+{% block title%}
+admin_view_marks
+{% endblock title%}
+
+{% block nav_bar%}
+    {% include 'admin/admin_nav.html' %}
+{% endblock nav_bar%}
+
+{% block slider %}
+    {% include 'admin/admin_slidebar.html' %}
+{% endblock slider%}
+{% block body %}
+
+    <head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h5 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 90px;
+    }
+  </style>
+</head>
+<br><br>
+<div class="container" style="margin-right:-60px">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h5 class="panel-title">Exams</h5>
+    </div>
+    <table class="table table-hover table-bordered" id="dev-table">
+      <thead>
+        <tr>
+          <th>Exam Name</th>          
+          <th>Action</th>
+        </tr>
+      </thead>
+      {% for t in courses %}
+      <tr>
+
+        <td> {{t.course_name}}</td>        
+        
+        <td><a class="btn btn-danger btn-sm" style="border-radius: 0%;" href=" {% url 'admin:admin_check_marks' t.id  %} "><span class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock body%}
+{% block footer %}
+    {% include 'admin/admin_footer.html' %}
+{% endblock footer %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block title  %}Student Signin{% endblock title  %}
+{% block student_mainblock %}
+
+    <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Sign in </h2>
+                    </div>
+                    <div class="col-12">
+                        <a href=" {% url 'index' %} ">Home</a>
+                        <a href="">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- signin Start -->
+        <div class="contact">
+            <div class="container">
+            		<div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="contact-form">
+                            <div id="success"></div>                            
+                            <form method="post">
+                            {% csrf_token %}
+                                <div class="control-group">
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email-id" required="true" data-validation-required-message="Please Enter your Contact number" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input name="password" type="password" class="form-control" id="password" placeholder="Password" required="true" data-validation-required-message="Please Enter your Contact number" />
+                                    <p class="help-block text-danger"></p>
+                                </div>                
+                                <div class="control-group">
+                                    <button class="btn" type="submit" id="registerbtn">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- sign in End -->
+{% endblock student_mainblock  %}
+   

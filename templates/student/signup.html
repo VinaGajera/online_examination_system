@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block title  %}Student Signup{% endblock title  %}
+{% block student_mainblock %}
+
+    <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Sign up</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href=" {% url 'index' %} ">Home</a>
+                        <a href="">Sign up</a>
+                    </div>
+                    <div class="col-12">
+                        <p class="help-block text-danger">Already registered?
+                        <a href=" {% url 'student:signin' %} ">Sign in</a></p>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Signup Start -->
+        <div class="contact">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>if you give the Exam</p>
+                    <h2>First you Register...</h2>
+                </div>
+					<div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="contact-form">
+                            <div id="success"></div>
+                            <form method="post" enctype="multipart/form-data">
+
+                            {% csrf_token %}
+                                <div class="control-group">
+                                    <input name="firstname" type="text" class="form-control" id="firstname" placeholder="Firstname" required="true" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input name="lastname" type="text" class="form-control" id="lastname" placeholder="Lastname" required="true" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input name="contact" type="Phone" class="form-control" id="contact" placeholder="Contact number" required="true" data-validation-required-message="Please Enter your Contact number" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email-id" required="true" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input name="password" type="password" class="form-control" id="password" placeholder="Password" required="true" data-validation-required-message="Please Enter your Contact number" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input name="city" type="text" class="form-control" id="city" placeholder="City" required="true" data-validation-required-message="Please Enter your Contact number" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <label for="profile_photo">Profile Photo</label>
+                                    <input name="profile_photo" type="file" accept="image/*" id="profile_photo" class="form-control" placeholder=""  required="true">
+                                    <p class="help-block text-danger"></p>
+                                </div>                
+                                <div class="control-group">
+                                    <button class="btn" type="submit" id="registerbtn">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Contact End -->
+
+
+
+{% endblock student_mainblock  %}
+   

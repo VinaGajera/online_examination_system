@@ -1,0 +1,133 @@
+{% extends 'admin/base_admin.html' %}
+
+{% load static %}
+
+{% block title%}
+Add Question
+{% endblock title%}
+
+{% block nav_bar%}
+    {% include 'admin/admin_nav.html' %}
+{% endblock nav_bar%}
+
+{% block slider %}
+    {% include 'admin/admin_slidebar.html' %}
+{% endblock slider%}
+
+{% block body %}
+
+<div class="wrapper">
+ <!-- Content Wrapper. Contains page content -->
+ <div class="content-wrapper">
+   <!-- Content Header (Page header) -->
+   <section class="content-header">
+     <div class="container-fluid">
+       <div class="row mb-2">
+         <div class="col-sm-6">
+           <h1><i class="nav-icon fas fa-edit">&nbsp</i>Question</h1>
+         </div>
+         <div class="col-sm-6">
+           <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item"><a href="index.php"><i class="fa fa-home" aria-hidden="true">&nbsp</i>Home</a></li>
+             <li class="breadcrumb-item active">Question</li>
+           </ol>
+         </div>
+       </div>
+     </div><!-- /.container-fluid -->
+   </section>
+
+   <!-- Main content -->
+   <section class="content">
+     <div class="container-fluid">
+       <div class="row">
+         
+         <!-- left column -->
+         <div class="col-md-9 mx-auto">
+         
+           <!-- general form elements -->
+           <div class="card card-primary">
+             <div class="card-header">
+               <h3 class="card-title">Add Question</h3>
+             </div>
+             <!-- /.card-header -->
+             <!-- form start -->
+
+               
+
+             <form method="post" class="post-form" action="" enctype="multipart/form-data">
+                 {% csrf_token %}
+               <!-- <input type="hidden" name="u_id" value="<?php echo $row['u_id'];  ?>">
+               <input type="hidden" name="action" value="<?php echo $action;   ?>"> -->
+
+               <div class="card-body">
+                 {% comment %} <div class="form-group">
+                   <label>Course Name</label>
+                   <input type="text" class="form-control" value="{{}}" name="course_name" readonly="" placeholder="Enter Course Name" required="">
+                 </div> {% endcomment %}
+                <div class="form-group">
+                   <label>Remaining Questions :</label><label>{{num_of_ques}}</label>
+                 </div>
+                </div>
+
+                <div class="form-group">
+                   <label>Mark</label>
+                   <input type="number" class="form-control" name="mark" placeholder="Enter Total Number of Question" rows="3" required="">
+                 </div>
+
+                 <div class="form-group">
+                   <label>question</label>
+                   <input type="text" class="form-control" name="question" placeholder="Enter Total Marks" required="">
+                 </div>
+
+                 <div class="form-group">
+                   <label>option 1</label>
+                   <input type="text" class="form-control" name="option1" placeholder="Enter option 1" required="">
+                 </div>
+
+                 <div class="form-group">
+                   <label>option 2</label>
+                   <input type="text" class="form-control" name="option2" placeholder="Enter option 2" required="">
+                 </div>
+
+                 <div class="form-group">
+                   <label>option 3</label>
+                   <input type="text" class="form-control" name="option3" placeholder="Enter option 3" required="">
+                 </div>
+                 
+                 {% comment %} <div class="form-group">
+                   <label>Answer</label>
+                   <input type="text" class="form-control" name="answer" placeholder="Enter Answer" required="">
+                 </div> {% endcomment %}
+
+                <div class="form-group">
+                  <select name="c_answer" class="form-control food" required="">
+                            <option value="0">Select Answer</option>
+                                <option value="1">Option1</option>
+                                <option value="2">Option2</option>
+                                <option value="3">Option3</option>
+                            </select>
+               </div>
+               </div>              
+
+               <!-- /.card-body -->
+                
+               <div class="card-footer">
+                 <button type="submit" class="btn btn-outline-primary" name="go" value="Final">Submit</button>
+               </div>
+             </form>
+           </div>
+           <!-- /.card -->
+         </div>
+         <!--/.col (left) -->
+
+       </div>
+       <!-- /.row -->
+     </div>
+   </section>
+ </div>
+</div>
+{% endblock body%}
+
+{% block footer %}
+    {% include 'admin/admin_footer.html' %}
+{% endblock footer %}

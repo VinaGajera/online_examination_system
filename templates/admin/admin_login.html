@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;    
+        }
+        .box {
+            width: 500px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: #212529;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.25s;
+            margin-top: 100px
+        }
+
+        .box input[type="email"]{
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #838383;
+            padding: 10px 10px;
+            width: 250px;
+            outline: none;
+            color: white;
+            border-radius: 5px;
+            transition: 0.25s;
+        }
+        .box input[type="password"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #838383;
+            padding: 10px 10px;
+            width: 250px;
+            outline: none;
+            color: white;
+            border-radius: 5px;
+            transition: 0.25s;
+        }
+
+        .box h1 {
+            color: white;
+            font-weight: 500
+        }
+
+        .box input[type="text"]:focus,
+        .box input[type="password"]:focus {
+            width: 300px;
+            border-color: #4caf50;
+        }
+
+        .box input[type="submit"] {
+            border: 0;
+            background: #4caf50;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            
+            padding: 14px 40px;
+            outline: none;
+            color: white;
+            border-radius: 5px;
+            transition: 0.25s;
+            cursor: pointer
+        }
+
+        .box input[type="submit"]:hover {
+            background: #347736;
+        }
+  </style>
+  </head>
+  <body>
+               
+    <form class="box" method="post" style="margin:-170px 0 0 -290px;">
+    <h1>Admin Login </h1>
+                <div class="mb-3">
+                    <input type="email" name="a_email" class="form-control" placeholder="Email id">
+                </div>
+                <div class="mb-3">
+                    <input type="password" name="a_pass" class="form-control" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                        <input class="btn btn-primary" type="submit" value="Login">
+                </div>
+    </form>
+           
+<br><br>  
+</body>
+</html>
